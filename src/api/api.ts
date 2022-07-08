@@ -1,5 +1,5 @@
 const API_KEY = localStorage.getItem('weather_api_key') ?? 'Lo5oaJdGeMe9TFAcC40buQJAEBdIEibu';
-const API_HOST = 'http://dataservice.accuweather.com';
+const API_HOST = 'https://dataservice.accuweather.com';
 const API_VERSION = 'v1';
 
 export const cityByLocationApiUrl = (latitude: number, longitude: number) => `${API_HOST}/locations/${API_VERSION}/cities/geoposition/search?apikey=${API_KEY}&q=${latitude},${longitude}`;
