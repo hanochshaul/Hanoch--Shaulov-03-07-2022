@@ -15,7 +15,7 @@ const ForecastItem : FC<ForecastItemProps> = (props) => {
 
     return (
         <StyledForecastItemContainer elevation={12}>
-            <Typography color='textPrimary' variant="h4">{new Date(props.weatherDay.date).toLocaleString('default', { weekday: 'short' })}</Typography>
+            <Typography color='textPrimary' variant="h5">{new Date(props.weatherDay.date).toLocaleString('default', { weekday: 'short' })}</Typography>
             <WeatherImage weatherIcon={props.weatherDay.weatherIcon}/>
             <Box fontSize={30}>
                 <Stack>

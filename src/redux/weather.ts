@@ -4,6 +4,7 @@ import { cityByLocationApiUrl, citySearchApiUrl, currentWeatherApiUrl, forecastA
 import { Location } from "../interfaces/location.interface";
 import { Weather } from '../interfaces/weather.interface';
 import { Forecast } from '../interfaces/forecast.interface';
+import axios from 'axios';
 
 interface WeatherState {
   isLoading: boolean;
@@ -22,13 +23,15 @@ const initialState: WeatherState = {
 }
 
 const fetchData = async (api: string) => {
-  const response = await fetch(api);
-
-  if (response.status !== 200) {
-    throw new Error('Failed to fetch from server')
+  let response;
+  try {
+    response = await axios.get(api);
+  }
+  catch {
+    throw new Error('Failed to fetch data from server');
   }
 
-  return await response.json();
+  return response.data;
 }
 
 export const getCity = createAsyncThunk(

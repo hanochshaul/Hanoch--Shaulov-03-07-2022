@@ -29,7 +29,7 @@ const getData = async (url: string) => {
     response = await axios.get(url);
   }
   catch {
-    throw new Error('Failed to fetch data from server')
+    throw new Error('Failed to fetch data from server');
   }
 
   return response.data;

@@ -8,7 +8,7 @@ const FavoritesPageBox = styled(Box)(() => ({
         margin: 14,
         width: 200,
         minWidth: 200,
-        height: 256,
+        height: 280,
     }}));
 
 const FavoritePaper = styled(Paper)(() => ({

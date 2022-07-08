@@ -16,7 +16,7 @@ const WeatherPage = () => {
      const [location, setLocation] = useState<Location>();
 
      useEffect(() => {
-          !city && onSearch('Tel Aviv')
+           !city && onSearch('Tel Aviv');
      }, []);
 
      useEffect(() => {
